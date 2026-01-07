@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
   <meta name="title" content="DeGAML-LLM: Decoupling Generalization and Adaptation in Meta-Learning for LLMs">
-  <meta name="description" content="A novel meta-learning framework that explicitly decouples generalization and adaptation for large language models, achieving state-of-the-art results on reasoning benchmarks.">
-  <meta name="keywords" content="meta-learning, large language models, LLM, LoRA, adaptation, generalization, MAML, few-shot learning, NLP, deep learning">
+  <meta name="description"
+    content="A novel meta-learning framework that explicitly decouples generalization and adaptation for large language models, achieving state-of-the-art results on reasoning benchmarks.">
+  <meta name="keywords"
+    content="meta-learning, large language models, LLM, LoRA, adaptation, generalization, MAML, few-shot learning, NLP, deep learning">
   <meta name="author" content="Nitin Vetcha, Binqian Xu, Dianbo Liu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="DeGAML-LLM Research">
   <meta property="og:title" content="DeGAML-LLM: Decoupling Generalization and Adaptation in Meta-Learning for LLMs">
-  <meta property="og:description" content="A novel meta-learning framework that explicitly decouples generalization and adaptation for large language models, achieving state-of-the-art results on reasoning benchmarks.">
+  <meta property="og:description"
+    content="A novel meta-learning framework that explicitly decouples generalization and adaptation for large language models, achieving state-of-the-art results on reasoning benchmarks.">
   <meta property="og:url" content="https://nitinvetcha.github.io/DeGAML-LLM/">
-  <meta property="og:image" content="https://nitinvetcha.github.io/DeGAML-LLM/static/images/DeGAML-LLM-comparison-LLM.png">
+  <meta property="og:image"
+    content="https://nitinvetcha.github.io/DeGAML-LLM/static/images/DeGAML-LLM-comparison-LLM.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="DeGAML-LLM - Meta-Learning Framework Comparison">
@@ -31,23 +36,26 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DeGAML-LLM: Decoupling Generalization and Adaptation in Meta-Learning for LLMs">
-  <meta name="twitter:description" content="A novel meta-learning framework that explicitly decouples generalization and adaptation for large language models.">
-  <meta name="twitter:image" content="https://nitinvetcha.github.io/DeGAML-LLM/static/images/DeGAML-LLM-comparison-LLM.png">
+  <meta name="twitter:description"
+    content="A novel meta-learning framework that explicitly decouples generalization and adaptation for large language models.">
+  <meta name="twitter:image"
+    content="https://nitinvetcha.github.io/DeGAML-LLM/static/images/DeGAML-LLM-comparison-LLM.png">
   <meta name="twitter:image:alt" content="DeGAML-LLM - Meta-Learning Framework Comparison">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="Decoupling Generalization and Adaptation in Meta-Learning for Large Language Models">
+  <meta name="citation_title"
+    content="Decoupling Generalization and Adaptation in Meta-Learning for Large Language Models">
   <meta name="citation_author" content="Vetcha, Nitin">
   <meta name="citation_author" content="Xu, Binqian">
   <meta name="citation_author" content="Liu, Dianbo">
   <meta name="citation_publication_date" content="2025">
-  
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#667eea">
   <meta name="msapplication-TileColor" content="#667eea">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,21 +64,24 @@
 
 
   <title>DeGAML-LLM: Decoupling Generalization and Adaptation in Meta-Learning for LLMs</title>
-  
+
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -78,17 +89,17 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -129,50 +140,50 @@
     .hero-gradient {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
-    
+
     .results-table {
       width: 100%;
       border-collapse: collapse;
       margin: 1.5rem 0;
       font-size: 0.9rem;
     }
-    
+
     .results-table th,
     .results-table td {
       padding: 0.75rem;
       text-align: center;
       border: 1px solid #e0e0e0;
     }
-    
+
     .results-table th {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       font-weight: 600;
     }
-    
+
     .results-table tr:nth-child(even) {
       background-color: #f8f9fa;
     }
-    
+
     .results-table tr:hover {
       background-color: #e8f4f8;
     }
-    
+
     .highlight-row {
       background-color: #e8f5e9 !important;
       font-weight: 600;
     }
-    
+
     .positive-delta {
       color: #2e7d32;
       font-weight: 500;
     }
-    
+
     .negative-delta {
       color: #c62828;
       font-weight: 500;
     }
-    
+
     .method-card {
       background: white;
       border-radius: 12px;
@@ -181,41 +192,41 @@
       margin-bottom: 1.5rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
     .method-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
-    
+
     .method-icon {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    
+
     .key-contribution {
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
       border-radius: 12px;
       padding: 2rem;
       margin: 2rem 0;
     }
-    
+
     .contribution-item {
       display: flex;
       align-items: flex-start;
       margin-bottom: 1rem;
     }
-    
+
     .contribution-icon {
       color: #667eea;
       margin-right: 1rem;
       font-size: 1.5rem;
     }
-    
+
     .teaser-image {
       border-radius: 12px;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     }
-    
+
     .section-divider {
       height: 4px;
       background: linear-gradient(90deg, #667eea, #764ba2);
@@ -223,12 +234,12 @@
       margin: 3rem auto;
       width: 100px;
     }
-    
+
     @media screen and (max-width: 768px) {
       .results-table {
         font-size: 0.75rem;
       }
-      
+
       .results-table th,
       .results-table td {
         padding: 0.5rem;
@@ -236,6 +247,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Scroll to Top Button -->
@@ -244,431 +256,907 @@
   </button>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">
-              DeGAML-LLM: Decoupling Generalization and Adaptation in Meta-Learning for Large Language Models
-            </h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="mailto:nitinvetcha@gmail.com" target="_blank">Nitin Vetcha</a><sup>1,3</sup>,</span>
-              <span class="author-block">
-                <a href="mailto:xubinq11@gmail.com" target="_blank">Binqian Xu</a><sup>2</sup>,</span>
-              <span class="author-block">
-                <a href="https://dianbo.tech/" target="_blank">Dianbo Liu</a><sup>1</sup>
-              </span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <sup>1</sup>National University of Singapore &nbsp;&nbsp;
-                <sup>2</sup>Nanjing University of Science and Technology &nbsp;&nbsp;
-                <sup>3</sup>Indian Institute of Science
-              </span>
-            </div>
-
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
             <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- GitHub Link -->
-                <span class="link-block">
-                  <a href="https://github.com/nitinvetcha/DeGAML-LLM" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span>
-
-              <!-- Paper PDF (placeholder for now) -->
-              <span class="link-block">
-                <a href="#" target="_blank"
-                class="external-link button is-normal is-rounded is-dark" style="opacity: 0.6; pointer-events: none;">
-                <span class="icon">
-                  <i class="fas fa-file-pdf"></i>
+              <h1 class="title is-1 publication-title">
+                DeGAML-LLM: Decoupling Generalization and Adaptation in Meta-Learning for Large Language Models
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="mailto:nitinvetcha@gmail.com" target="_blank">Nitin Vetcha</a><sup>1,3</sup>,</span>
+                <span class="author-block">
+                  <a href="mailto:xubinq11@gmail.com" target="_blank">Binqian Xu</a><sup>2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://dianbo.tech/" target="_blank">Dianbo Liu</a><sup>1</sup>
                 </span>
-                <span>Paper (Coming Soon)</span>
-              </a>
-            </span>
+              </div>
 
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <sup>1</sup>National University of Singapore &nbsp;&nbsp;
+                  <sup>2</sup>Nanjing University of Science and Technology &nbsp;&nbsp;
+                  <sup>3</sup>Indian Institute of Science
+                </span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- GitHub Link -->
+                  <span class="link-block">
+                    <a href="https://github.com/nitinvetcha/DeGAML-LLM" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  <!-- Paper PDF (placeholder for now) -->
+                  <span class="link-block">
+                    <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark"
+                      style="opacity: 0.6; pointer-events: none;">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper (Coming Soon)</span>
+                    </a>
+                  </span>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
-<!-- Teaser Figure -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/DeGAML-LLM-comparison-LLM.png" alt="DeGAML-LLM comparison with MAML-en-LLM and ABMLL" class="teaser-image" style="width: 100%; border-radius: 12px;">
-      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
-        <strong>Visual comparison of parameter exploration and update dynamics across meta-learning paradigms.</strong>
-        MAML-en-LLM and ABMLL explicitly adapt parameters for multiple tasks through coupled meta-updates. 
-        DeGAML-LLM (ours) decouples generalization and adaptation: task-conditioned parameter generation explores 
-        diverse regions of the parameter space, while task-specific adaptation proceeds independently.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Fine-tuning large language models (LLMs) for downstream tasks remains expensive, even with parameter-efficient methods like Low-Rank Adaptation (LoRA). In this regard, meta-learning approaches such as Model-Agnostic Meta-Learning for LLMs (MAML-en-LLM) and Amortized Bayesian Meta-Learning for LoRA (ABMLL) have emerged as promising solutions for rapid downstream LLM adaptation. However, these methods fundamentally <em>couple</em> two distinct objectives: learning generalizable initializations and enabling efficient task adaptation. We argue that this coupling limits both the quality of learned representations and adaptation efficiency.
-          </p>
-          <p>
-            In this paper, we introduce <strong>DeGAML-LLM</strong> (<strong>De</strong>coupled <strong>G</strong>eneralization and <strong>A</strong>daptation <strong>M</strong>eta-<strong>L</strong>earning for <strong>L</strong>arge <strong>L</strong>anguage <strong>M</strong>odels), a novel framework that explicitly separates these two objectives through dedicated parameter spaces. Specifically, we maintain a <em>generalization module</em> that learns task-agnostic representations across the task distribution, and an <em>adaptation module</em> that specializes in rapid task-specific adjustment. Extensive experiments on common-sense reasoning, mathematics, logic, social, medical and coding benchmarks across model scales demonstrate that DeGAML-LLM outperforms existing meta-learning and standard multi-task baselines.
-          </p>
+    <!-- Teaser Figure -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/DeGAML-LLM-comparison-LLM.png" alt="DeGAML-LLM comparison with MAML-en-LLM and ABMLL"
+            class="teaser-image" style="width: 100%; border-radius: 12px;">
+          <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+            <strong>Visual comparison of parameter exploration and update dynamics across meta-learning
+              paradigms.</strong>
+            MAML-en-LLM and ABMLL explicitly adapt parameters for multiple tasks through coupled meta-updates.
+            DeGAML-LLM (ours) decouples generalization and adaptation: task-conditioned parameter generation explores
+            diverse regions of the parameter space, while task-specific adaptation proceeds independently.
+          </h2>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
+    <!-- End teaser -->
 
-<div class="section-divider"></div>
-
-<!-- Key Contributions -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Key Contributions</h2>
-    <div class="key-contribution">
-      <div class="contribution-item">
-        <span class="contribution-icon"><i class="fas fa-lightbulb"></i></span>
-        <div>
-          <strong>Problem Identification:</strong> We analyze existing meta-learning methods for LLMs and highlight the limitations arising from coupling cross-task generalization and task-specific adaptation within a single optimization process.
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Fine-tuning large language models (LLMs) for downstream tasks remains expensive, even with
+                parameter-efficient methods like Low-Rank Adaptation (LoRA). In this regard, meta-learning approaches
+                such as Model-Agnostic Meta-Learning for LLMs (MAML-en-LLM) and Amortized Bayesian Meta-Learning for
+                LoRA (ABMLL) have emerged as promising solutions for rapid downstream LLM adaptation. However, these
+                methods fundamentally <em>couple</em> two distinct objectives: learning generalizable initializations
+                and enabling efficient task adaptation. We argue that this coupling limits both the quality of learned
+                representations and adaptation efficiency.
+              </p>
+              <p>
+                In this paper, we introduce <strong>DeGAML-LLM</strong> (<strong>De</strong>coupled
+                <strong>G</strong>eneralization and <strong>A</strong>daptation
+                <strong>M</strong>eta-<strong>L</strong>earning for <strong>L</strong>arge <strong>L</strong>anguage
+                <strong>M</strong>odels), a novel framework that explicitly separates these two objectives through
+                dedicated parameter spaces. Specifically, we maintain a <em>generalization module</em> that learns
+                task-agnostic representations across the task distribution, and an <em>adaptation module</em> that
+                specializes in rapid task-specific adjustment. Extensive experiments on common-sense reasoning,
+                mathematics, logic, social, medical and coding benchmarks across model scales demonstrate that
+                DeGAML-LLM outperforms existing meta-learning and standard multi-task baselines.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="contribution-item">
-        <span class="contribution-icon"><i class="fas fa-cogs"></i></span>
-        <div>
-          <strong>Novel Framework:</strong> We propose DeGAML-LLM, a decoupled meta-learning framework that separates generalization and adaptation into distinct parameter modules, enabling more flexible task-specific adaptation.
-        </div>
-      </div>
-      <div class="contribution-item">
-        <span class="contribution-icon"><i class="fas fa-chart-line"></i></span>
-        <div>
-          <strong>Empirical Validation:</strong> We demonstrate that DeGAML-LLM outperforms prior meta-learning and multi-task baselines on a diverse set of in-domain and out-of-domain benchmarks.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+    <!-- End paper abstract -->
 
-<!-- Method Overview -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Method Overview</h2>
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <img src="static/images/DeGAML-LLM-LLM.png" alt="DeGAML-LLM Architecture" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
-        <p class="has-text-centered" style="margin-top: 1.5rem; color: #666;">
-          <strong>Internal Transformer Architecture Modifications.</strong> (a) MAML-en-LLM updates all weights via gradients from a meta-learned initialization. (b) ABMLL samples low-rank LoRA adapters from a learned Bayesian posterior distribution. (c) DeGAML-LLM uses a separate generator to predict initial adapter weights, which are then refined by a separate RL policy without gradient backpropagation to the generator.
+    <div class="section-divider"></div>
+
+    <!-- Key Contributions -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+        <div class="key-contribution">
+          <div class="contribution-item">
+            <span class="contribution-icon"><i class="fas fa-lightbulb"></i></span>
+            <div>
+              <strong>Problem Identification:</strong> We analyze existing meta-learning methods for LLMs and highlight
+              the limitations arising from coupling cross-task generalization and task-specific adaptation within a
+              single optimization process.
+            </div>
+          </div>
+          <div class="contribution-item">
+            <span class="contribution-icon"><i class="fas fa-cogs"></i></span>
+            <div>
+              <strong>Novel Framework:</strong> We propose DeGAML-LLM, a decoupled meta-learning framework that
+              separates generalization and adaptation into distinct parameter modules, enabling more flexible
+              task-specific adaptation.
+            </div>
+          </div>
+          <div class="contribution-item">
+            <span class="contribution-icon"><i class="fas fa-chart-line"></i></span>
+            <div>
+              <strong>Empirical Validation:</strong> We demonstrate that DeGAML-LLM outperforms prior meta-learning and
+              multi-task baselines on a diverse set of in-domain and out-of-domain benchmarks.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Method Overview -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method Overview</h2>
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <img src="static/images/DeGAML-LLM-LLM.png" alt="DeGAML-LLM Architecture"
+              style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+            <p class="has-text-centered" style="margin-top: 1.5rem; color: #666;">
+              <strong>Internal Transformer Architecture Modifications.</strong> (a) MAML-en-LLM updates all weights via
+              gradients from a meta-learned initialization. (b) ABMLL samples low-rank LoRA adapters from a learned
+              Bayesian posterior distribution. (c) DeGAML-LLM uses a separate generator to predict initial adapter
+              weights, which are then refined by a separate RL policy without gradient backpropagation to the generator.
+            </p>
+          </div>
+        </div>
+
+        <div class="columns is-multiline" style="margin-top: 2rem;">
+          <div class="column is-6">
+            <div class="method-card">
+              <div class="method-icon">🔮</div>
+              <h4 class="title is-5">Generalization Module</h4>
+              <p>Learns to generate LoRA adapter parameters from task prompts using a hyperconvolutional decoder trained
+                on checkpoint trajectories. Captures cross-task structural knowledge without encoding any specific
+                adaptation trajectory.</p>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="method-card">
+              <div class="method-icon">⚡</div>
+              <h4 class="title is-5">Adaptation Module</h4>
+              <p>Refines generated parameters via an RL policy that selects from four adaptation families: Test-Time
+                Training (TTT), Test-Time Scaling (TTS), LoRA Mixing, and Latent Space optimization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Results Section -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+
+        <h3 class="title is-4" style="margin-top: 2rem;">In-Domain Tasks (Common-Sense Reasoning)</h3>
+
+        <!-- Qwen2.5-1.5B Results -->
+        <p class="subtitle is-6" style="margin-top: 1.5rem;"><strong>Qwen2.5-1.5B-Instruct</strong></p>
+
+        <div style="overflow-x: auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>ARC-c</th>
+                <th>ARC-e</th>
+                <th>HellaSwag</th>
+                <th>BoolQ</th>
+                <th>PIQA</th>
+                <th>WinoGrande</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No Meta-Train LoRA</td>
+                <td><strong>74.5</strong></td>
+                <td>84.4</td>
+                <td>55.8</td>
+                <td>55.6</td>
+                <td>65.6</td>
+                <td>48.2</td>
+                <td>64.0</td>
+              </tr>
+              <tr>
+                <td>Union Train LoRA</td>
+                <td>63.2</td>
+                <td>73.9</td>
+                <td>48.9</td>
+                <td>55.1</td>
+                <td>47.8</td>
+                <td><strong>61.3</strong></td>
+                <td>58.3</td>
+              </tr>
+              <tr>
+                <td>ABMLL</td>
+                <td>69.9</td>
+                <td>83.2</td>
+                <td>51.1</td>
+                <td><strong>63.2</strong></td>
+                <td>54.3</td>
+                <td>52.9</td>
+                <td>62.4</td>
+              </tr>
+              <tr>
+                <td>MAML-en-LLM</td>
+                <td>66.0</td>
+                <td>84.3</td>
+                <td><strong>59.3</strong></td>
+                <td>58.7</td>
+                <td>68.1</td>
+                <td>56.8</td>
+                <td>65.5</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>DeGAML-LLM (Ours)</strong></td>
+                <td>73.7</td>
+                <td><strong>88.4</strong></td>
+                <td>57.2</td>
+                <td>58.8</td>
+                <td><strong>70.7</strong></td>
+                <td>57.3</td>
+                <td><strong>67.7</strong></td>
+              </tr>
+              <tr>
+                <td>Δ (vs MAML-en-LLM)</td>
+                <td class="positive-delta">+7.7</td>
+                <td class="positive-delta">+4.1</td>
+                <td class="negative-delta">-2.1</td>
+                <td class="positive-delta">+0.1</td>
+                <td class="positive-delta">+2.6</td>
+                <td class="positive-delta">+0.5</td>
+                <td class="positive-delta">+2.2</td>
+              </tr>
+              <tr>
+                <td>Δ (vs ABMLL)</td>
+                <td class="positive-delta">+3.8</td>
+                <td class="positive-delta">+5.2</td>
+                <td class="positive-delta">+6.1</td>
+                <td class="negative-delta">-4.4</td>
+                <td class="positive-delta">+16.4</td>
+                <td class="positive-delta">+4.4</td>
+                <td class="positive-delta">+5.3</td>
+              </tr>
+              <tr>
+                <td>Δ (vs No Meta-Train)</td>
+                <td class="negative-delta">-0.8</td>
+                <td class="positive-delta">+4.0</td>
+                <td class="positive-delta">+1.4</td>
+                <td class="positive-delta">+3.2</td>
+                <td class="positive-delta">+5.1</td>
+                <td class="positive-delta">+9.1</td>
+                <td class="positive-delta">+3.7</td>
+              </tr>
+              <tr>
+                <td>Δ (vs Union Train)</td>
+                <td class="positive-delta">+10.5</td>
+                <td class="positive-delta">+14.5</td>
+                <td class="positive-delta">+8.3</td>
+                <td class="positive-delta">+3.7</td>
+                <td class="positive-delta">+22.9</td>
+                <td class="negative-delta">-4.0</td>
+                <td class="positive-delta">+9.4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Qwen2.5-0.5B Results -->
+        <p class="subtitle is-6" style="margin-top: 2rem;"><strong>Qwen2.5-0.5B-Instruct</strong></p>
+
+        <div style="overflow-x: auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>ARC-c</th>
+                <th>ARC-e</th>
+                <th>HellaSwag</th>
+                <th>BoolQ</th>
+                <th>PIQA</th>
+                <th>WinoGrande</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No Meta-Train LoRA</td>
+                <td>40.7</td>
+                <td>59.4</td>
+                <td>23.4</td>
+                <td>22.1</td>
+                <td>66.2</td>
+                <td>35.7</td>
+                <td>41.2</td>
+              </tr>
+              <tr>
+                <td>Union Train LoRA</td>
+                <td>39.7</td>
+                <td>47.4</td>
+                <td>26.3</td>
+                <td>14.7</td>
+                <td>51.1</td>
+                <td><strong>50.5</strong></td>
+                <td>38.3</td>
+              </tr>
+              <tr>
+                <td>ABMLL</td>
+                <td>37.6</td>
+                <td>54.4</td>
+                <td>26.5</td>
+                <td><strong>62.2</strong></td>
+                <td>37.6</td>
+                <td>34.5</td>
+                <td>42.1</td>
+              </tr>
+              <tr>
+                <td>MAML-en-LLM</td>
+                <td>47.7</td>
+                <td>63.7</td>
+                <td>36.3</td>
+                <td>46.2</td>
+                <td><strong>67.7</strong></td>
+                <td>50.1</td>
+                <td>51.9</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>DeGAML-LLM (Ours)</strong></td>
+                <td><strong>55.5</strong></td>
+                <td><strong>74.7</strong></td>
+                <td><strong>48.3</strong></td>
+                <td>58.7</td>
+                <td>60.1</td>
+                <td>52.8</td>
+                <td><strong>58.4</strong></td>
+              </tr>
+              <tr>
+                <td>Δ (vs MAML-en-LLM)</td>
+                <td class="positive-delta">+7.8</td>
+                <td class="positive-delta">+11.0</td>
+                <td class="positive-delta">+12.3</td>
+                <td class="positive-delta">+12.5</td>
+                <td class="negative-delta">-7.6</td>
+                <td class="positive-delta">+2.7</td>
+                <td class="positive-delta">+6.5</td>
+              </tr>
+              <tr>
+                <td>Δ (vs ABMLL)</td>
+                <td class="positive-delta">+17.9</td>
+                <td class="positive-delta">+20.3</td>
+                <td class="positive-delta">+21.8</td>
+                <td class="negative-delta">-3.5</td>
+                <td class="positive-delta">+22.5</td>
+                <td class="positive-delta">+18.3</td>
+                <td class="positive-delta">+16.3</td>
+              </tr>
+              <tr>
+                <td>Δ (vs No Meta-Train)</td>
+                <td class="positive-delta">+14.8</td>
+                <td class="positive-delta">+15.3</td>
+                <td class="positive-delta">+24.9</td>
+                <td class="positive-delta">+36.7</td>
+                <td class="negative-delta">-6.1</td>
+                <td class="positive-delta">+17.1</td>
+                <td class="positive-delta">+17.2</td>
+              </tr>
+              <tr>
+                <td>Δ (vs Union Train)</td>
+                <td class="positive-delta">+15.8</td>
+                <td class="positive-delta">+27.3</td>
+                <td class="positive-delta">+22.0</td>
+                <td class="positive-delta">+44.1</td>
+                <td class="positive-delta">+9.0</td>
+                <td class="positive-delta">+2.3</td>
+                <td class="positive-delta">+20.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="title is-4" style="margin-top: 3rem;">Out-of-Domain Tasks</h3>
+
+        <!-- Qwen2.5-1.5B Out-of-Domain Results -->
+        <p class="subtitle is-6" style="margin-top: 1.5rem;"><strong>Qwen2.5-1.5B-Instruct</strong></p>
+
+        <div style="overflow-x: auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>GSM-8K</th>
+                <th>MATH</th>
+                <th>DivLogicEval</th>
+                <th>SocialIQA</th>
+                <th>CodeMMLU</th>
+                <th>JAMA</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Union Train LoRA</td>
+                <td>34.2</td>
+                <td>32.2</td>
+                <td>24.1</td>
+                <td>51.4</td>
+                <td>34.7</td>
+                <td>34.7</td>
+                <td>36.1</td>
+              </tr>
+              <tr>
+                <td>ABMLL</td>
+                <td>28.7</td>
+                <td>15.9</td>
+                <td>26.9</td>
+                <td>66.3</td>
+                <td>39.6</td>
+                <td>28.5</td>
+                <td>34.3</td>
+              </tr>
+              <tr>
+                <td>MAML-en-LLM</td>
+                <td>35.6</td>
+                <td>43.5</td>
+                <td>31.2</td>
+                <td>68.7</td>
+                <td>42.3</td>
+                <td>32.5</td>
+                <td>42.3</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>DeGAML-LLM (Ours)</strong></td>
+                <td><strong>51.4</strong></td>
+                <td><strong>46.9</strong></td>
+                <td><strong>31.4</strong></td>
+                <td><strong>69.5</strong></td>
+                <td><strong>44.6</strong></td>
+                <td><strong>41.5</strong></td>
+                <td><strong>47.5</strong></td>
+              </tr>
+              <tr>
+                <td>Δ (vs MAML-en-LLM)</td>
+                <td class="positive-delta">+15.8</td>
+                <td class="positive-delta">+3.4</td>
+                <td class="positive-delta">+0.2</td>
+                <td class="positive-delta">+0.8</td>
+                <td class="positive-delta">+2.3</td>
+                <td class="positive-delta">+9.0</td>
+                <td class="positive-delta">+5.3</td>
+              </tr>
+              <tr>
+                <td>Δ (vs ABMLL)</td>
+                <td class="positive-delta">+22.7</td>
+                <td class="positive-delta">+31.0</td>
+                <td class="positive-delta">+4.5</td>
+                <td class="positive-delta">+3.2</td>
+                <td class="positive-delta">+5.0</td>
+                <td class="positive-delta">+13.0</td>
+                <td class="positive-delta">+13.2</td>
+              </tr>
+              <tr>
+                <td>Δ (vs Union Train)</td>
+                <td class="positive-delta">+17.2</td>
+                <td class="positive-delta">+14.7</td>
+                <td class="positive-delta">+7.3</td>
+                <td class="positive-delta">+18.1</td>
+                <td class="positive-delta">+9.9</td>
+                <td class="positive-delta">+6.8</td>
+                <td class="positive-delta">+11.4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Qwen2.5-0.5B Out-of-Domain Results -->
+        <p class="subtitle is-6" style="margin-top: 2rem;"><strong>Qwen2.5-0.5B-Instruct</strong></p>
+
+        <div style="overflow-x: auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>GSM-8K</th>
+                <th>MATH</th>
+                <th>DivLogicEval</th>
+                <th>SocialIQA</th>
+                <th>CodeMMLU</th>
+                <th>JAMA</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Union Train LoRA</td>
+                <td>15.6</td>
+                <td>6.8</td>
+                <td>20.3</td>
+                <td>39.5</td>
+                <td>29.8</td>
+                <td>29.9</td>
+                <td>23.6</td>
+              </tr>
+              <tr>
+                <td>ABMLL</td>
+                <td>20.4</td>
+                <td>7.1</td>
+                <td>23.7</td>
+                <td>53.1</td>
+                <td>28.2</td>
+                <td>16.8</td>
+                <td>24.9</td>
+              </tr>
+              <tr>
+                <td>MAML-en-LLM</td>
+                <td>29.1</td>
+                <td><strong>26.3</strong></td>
+                <td>25.1</td>
+                <td>54.9</td>
+                <td>34.1</td>
+                <td>26.4</td>
+                <td>32.6</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>DeGAML-LLM (Ours)</strong></td>
+                <td><strong>30.3</strong></td>
+                <td>24.5</td>
+                <td><strong>28.7</strong></td>
+                <td><strong>55.1</strong></td>
+                <td><strong>35.6</strong></td>
+                <td><strong>31.2</strong></td>
+                <td><strong>34.2</strong></td>
+              </tr>
+              <tr>
+                <td>Δ (vs MAML-en-LLM)</td>
+                <td class="positive-delta">+1.2</td>
+                <td class="negative-delta">-1.8</td>
+                <td class="positive-delta">+3.6</td>
+                <td class="positive-delta">+0.2</td>
+                <td class="positive-delta">+1.5</td>
+                <td class="positive-delta">+4.8</td>
+                <td class="positive-delta">+1.6</td>
+              </tr>
+              <tr>
+                <td>Δ (vs ABMLL)</td>
+                <td class="positive-delta">+9.9</td>
+                <td class="positive-delta">+17.4</td>
+                <td class="positive-delta">+5.0</td>
+                <td class="positive-delta">+2.0</td>
+                <td class="positive-delta">+7.4</td>
+                <td class="positive-delta">+14.4</td>
+                <td class="positive-delta">+9.3</td>
+              </tr>
+              <tr>
+                <td>Δ (vs Union Train)</td>
+                <td class="positive-delta">+14.7</td>
+                <td class="positive-delta">+17.7</td>
+                <td class="positive-delta">+8.4</td>
+                <td class="positive-delta">+15.6</td>
+                <td class="positive-delta">+5.8</td>
+                <td class="positive-delta">+1.3</td>
+                <td class="positive-delta">+10.6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notification is-info is-light" style="margin-top: 2rem;">
+          <p><strong>Key Findings:</strong></p>
+          <ul>
+            <li>DeGAML-LLM consistently outperforms baselines across both model scales</li>
+            <li>Particularly strong on out-of-domain tasks: <strong>+15.8</strong> on GSM-8K and <strong>+9.0</strong>
+              on JAMA (1.5B)</li>
+            <li>Larger improvements on smaller 0.5B model demonstrate effectiveness at limited capacity</li>
+            <li>Average improvement of <strong>+5.3 points</strong> over MAML-en-LLM on out-of-domain tasks (1.5B)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ablation Study -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Ablation Study</h2>
+        <p class="has-text-centered" style="margin-bottom: 2rem;">
+          Impact of generalization and adaptation stages. <strong>Base Model</strong> denotes the frozen pretrained LLM
+          without any LoRA adapters.
+          <strong>Generalization</strong> evaluates performance using generated LoRA parameters without task-specific
+          refinement.
+          <strong>Adaptation</strong> applies RL-based refinement to the generated parameters.
         </p>
-      </div>
-    </div>
-    
-    <div class="columns is-multiline" style="margin-top: 2rem;">
-      <div class="column is-6">
-        <div class="method-card">
-          <div class="method-icon">🔮</div>
-          <h4 class="title is-5">Generalization Module</h4>
-          <p>Learns to generate LoRA adapter parameters from task prompts using a hyperconvolutional decoder trained on checkpoint trajectories. Captures cross-task structural knowledge without encoding any specific adaptation trajectory.</p>
+
+        <h3 class="title is-5">In-Domain Tasks</h3>
+
+        <!-- 1.5B In-Domain Ablation -->
+        <p class="subtitle is-6" style="margin-top: 1.5rem;"><strong>Qwen2.5-1.5B-Instruct</strong></p>
+
+        <div style="overflow-x: auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>ARC-c</th>
+                <th>ARC-e</th>
+                <th>HellaSwag</th>
+                <th>BoolQ</th>
+                <th>PIQA</th>
+                <th>WinoGrande</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Base Model</td>
+                <td>71.5</td>
+                <td>83.0</td>
+                <td>50.9</td>
+                <td>56.3</td>
+                <td>45.8</td>
+                <td>50.6</td>
+                <td>59.6</td>
+              </tr>
+              <tr>
+                <td>+ Generalization</td>
+                <td>73.0 <span class="positive-delta">(+2.1%)</span></td>
+                <td>83.7 <span class="positive-delta">(+0.8%)</span></td>
+                <td>56.2 <span class="positive-delta">(+10.4%)</span></td>
+                <td>55.2 <span class="negative-delta">(-2.0%)</span></td>
+                <td>56.4 <span class="positive-delta">(+23.1%)</span></td>
+                <td>50.2 <span class="negative-delta">(-0.8%)</span></td>
+                <td>62.5 <span class="positive-delta">(+4.9%)</span></td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>+ Adaptation</strong></td>
+                <td>73.7 <span class="positive-delta">(+1.0%)</span></td>
+                <td>88.4 <span class="positive-delta">(+5.6%)</span></td>
+                <td>57.2 <span class="positive-delta">(+1.8%)</span></td>
+                <td>58.8 <span class="positive-delta">(+6.5%)</span></td>
+                <td>70.7 <span class="positive-delta">(+25.4%)</span></td>
+                <td>57.3 <span class="positive-delta">(+14.1%)</span></td>
+                <td>67.7 <span class="positive-delta">(+8.3%)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 0.5B In-Domain Ablation -->
+        <p class="subtitle is-6" style="margin-top: 2rem;"><strong>Qwen2.5-0.5B-Instruct</strong></p>
+
+        <div style="overflow-x: auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>ARC-c</th>
+                <th>ARC-e</th>
+                <th>HellaSwag</th>
+                <th>BoolQ</th>
+                <th>PIQA</th>
+                <th>WinoGrande</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Base Model</td>
+                <td>38.3</td>
+                <td>54.8</td>
+                <td>26.5</td>
+                <td>37.0</td>
+                <td>16.6</td>
+                <td>50.2</td>
+                <td>37.2</td>
+              </tr>
+              <tr>
+                <td>+ Generalization</td>
+                <td>42.7 <span class="positive-delta">(+11.5%)</span></td>
+                <td>63.2 <span class="positive-delta">(+15.3%)</span></td>
+                <td>25.9 <span class="negative-delta">(-2.3%)</span></td>
+                <td>44.9 <span class="positive-delta">(+21.4%)</span></td>
+                <td>47.6 <span class="positive-delta">(+186.7%)</span></td>
+                <td>50.0 <span class="negative-delta">(-0.4%)</span></td>
+                <td>45.7 <span class="positive-delta">(+22.9%)</span></td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>+ Adaptation</strong></td>
+                <td>55.5 <span class="positive-delta">(+30.0%)</span></td>
+                <td>74.7 <span class="positive-delta">(+18.2%)</span></td>
+                <td>48.3 <span class="positive-delta">(+86.5%)</span></td>
+                <td>58.7 <span class="positive-delta">(+30.7%)</span></td>
+                <td>60.1 <span class="positive-delta">(+26.3%)</span></td>
+                <td>52.8 <span class="positive-delta">(+5.6%)</span></td>
+                <td>58.4 <span class="positive-delta">(+27.8%)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="title is-5" style="margin-top: 3rem;">Out-of-Domain Tasks</h3>
+
+        <!-- 1.5B Out-of-Domain Ablation -->
+        <p class="subtitle is-6" style="margin-top: 1.5rem;"><strong>Qwen2.5-1.5B-Instruct</strong></p>
+
+        <div style="overflow-x: auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>GSM-8K</th>
+                <th>MATH</th>
+                <th>DivLogicEval</th>
+                <th>SocialIQA</th>
+                <th>CodeMMLU</th>
+                <th>JAMA</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Base Model</td>
+                <td>51.8</td>
+                <td>30.3</td>
+                <td>28.3</td>
+                <td>65.9</td>
+                <td>42.6</td>
+                <td>38.9</td>
+                <td>42.9</td>
+              </tr>
+              <tr>
+                <td>+ Generalization</td>
+                <td>32.6 <span class="negative-delta">(-37.1%)</span></td>
+                <td>40.1 <span class="positive-delta">(+32.3%)</span></td>
+                <td>28.6 <span class="positive-delta">(+1.1%)</span></td>
+                <td>68.6 <span class="positive-delta">(+4.1%)</span></td>
+                <td>44.1 <span class="positive-delta">(+3.5%)</span></td>
+                <td>39.5 <span class="positive-delta">(+1.5%)</span></td>
+                <td>42.2 <span class="negative-delta">(-1.6%)</span></td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>+ Adaptation</strong></td>
+                <td>51.4 <span class="positive-delta">(+57.7%)</span></td>
+                <td>46.9 <span class="positive-delta">(+17.0%)</span></td>
+                <td>31.4 <span class="positive-delta">(+9.8%)</span></td>
+                <td>69.5 <span class="positive-delta">(+1.3%)</span></td>
+                <td>44.6 <span class="positive-delta">(+1.1%)</span></td>
+                <td>41.5 <span class="positive-delta">(+5.1%)</span></td>
+                <td>47.5 <span class="positive-delta">(+12.6%)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 0.5B Out-of-Domain Ablation -->
+        <p class="subtitle is-6" style="margin-top: 2rem;"><strong>Qwen2.5-0.5B-Instruct</strong></p>
+
+        <div style="overflow-x: auto;">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>GSM-8K</th>
+                <th>MATH</th>
+                <th>DivLogicEval</th>
+                <th>SocialIQA</th>
+                <th>CodeMMLU</th>
+                <th>JAMA</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Base Model</td>
+                <td>15.2</td>
+                <td>2.8</td>
+                <td>22.4</td>
+                <td>50.8</td>
+                <td>32.4</td>
+                <td>23.8</td>
+                <td>24.5</td>
+              </tr>
+              <tr>
+                <td>+ Generalization</td>
+                <td>20.8 <span class="positive-delta">(+36.8%)</span></td>
+                <td>24.1 <span class="positive-delta">(+760.7%)</span></td>
+                <td>21.0 <span class="negative-delta">(-6.3%)</span></td>
+                <td>33.5 <span class="negative-delta">(-34.1%)</span></td>
+                <td>29.1 <span class="negative-delta">(-10.2%)</span></td>
+                <td>11.7 <span class="negative-delta">(-50.8%)</span></td>
+                <td>25.7 <span class="positive-delta">(+4.9%)</span></td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>+ Adaptation</strong></td>
+                <td>30.3 <span class="positive-delta">(+45.7%)</span></td>
+                <td>24.5 <span class="positive-delta">(+1.7%)</span></td>
+                <td>28.7 <span class="positive-delta">(+36.7%)</span></td>
+                <td>55.1 <span class="positive-delta">(+64.5%)</span></td>
+                <td>35.6 <span class="positive-delta">(+22.3%)</span></td>
+                <td>31.2 <span class="positive-delta">(+166.7%)</span></td>
+                <td>34.2 <span class="positive-delta">(+33.1%)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="notification is-success is-light" style="margin-top: 2rem;">
+          <p><strong>Ablation Insights:</strong></p>
+          <ul>
+            <li>The <strong>generalization module</strong> alone provides substantial improvements over the base model
+            </li>
+            <li>The <strong>adaptation module</strong> further refines performance, especially on complex tasks
+              (HellaSwag: +86.5% for 0.5B)</li>
+            <li>Out-of-domain tasks show particularly large gains from adaptation (MATH: +760.7% generalization, then
+              adaptation refines it)</li>
+            <li>Decoupling enables the adaptation policy to recover from suboptimal generalization (e.g., GSM-8K: -37.1%
+              → +57.7% for 1.5B)</li>
+          </ul>
         </div>
       </div>
-      <div class="column is-6">
-        <div class="method-card">
-          <div class="method-icon">⚡</div>
-          <h4 class="title is-5">Adaptation Module</h4>
-          <p>Refines generated parameters via an RL policy that selects from four adaptation families: Test-Time Training (TTT), Test-Time Scaling (TTS), LoRA Mixing, and Latent Space optimization.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- Results Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Experimental Results</h2>
-    
-    <h3 class="title is-4" style="margin-top: 2rem;">In-Domain Tasks (Common-Sense Reasoning)</h3>
-    <p class="subtitle is-6">Qwen2.5-1.5B-Instruct</p>
-    
-    <div style="overflow-x: auto;">
-      <table class="results-table">
-        <thead>
-          <tr>
-            <th>Method</th>
-            <th>ARC-c</th>
-            <th>ARC-e</th>
-            <th>HellaSwag</th>
-            <th>BoolQ</th>
-            <th>PIQA</th>
-            <th>WinoGrande</th>
-            <th>Avg</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>No Meta-Train LoRA</td>
-            <td>74.5</td>
-            <td>84.4</td>
-            <td>55.8</td>
-            <td>55.6</td>
-            <td>65.6</td>
-            <td>48.2</td>
-            <td>64.0</td>
-          </tr>
-          <tr>
-            <td>Union Train LoRA</td>
-            <td>63.2</td>
-            <td>73.9</td>
-            <td>48.9</td>
-            <td>55.1</td>
-            <td>47.8</td>
-            <td>61.3</td>
-            <td>58.3</td>
-          </tr>
-          <tr>
-            <td>ABMLL</td>
-            <td>69.9</td>
-            <td>83.2</td>
-            <td>51.1</td>
-            <td><strong>63.2</strong></td>
-            <td>54.3</td>
-            <td>52.9</td>
-            <td>62.4</td>
-          </tr>
-          <tr>
-            <td>MAML-en-LLM</td>
-            <td>66.0</td>
-            <td>84.3</td>
-            <td><strong>59.3</strong></td>
-            <td>58.7</td>
-            <td>68.1</td>
-            <td>56.8</td>
-            <td>65.5</td>
-          </tr>
-          <tr class="highlight-row">
-            <td><strong>DeGAML-LLM (Ours)</strong></td>
-            <td><strong>73.7</strong></td>
-            <td><strong>88.4</strong></td>
-            <td>57.2</td>
-            <td>58.8</td>
-            <td><strong>70.7</strong></td>
-            <td><strong>57.3</strong></td>
-            <td><strong>67.7</strong></td>
-          </tr>
-          <tr>
-            <td>Δ (vs MAML-en-LLM)</td>
-            <td class="positive-delta">+7.7</td>
-            <td class="positive-delta">+4.1</td>
-            <td class="negative-delta">-2.1</td>
-            <td class="positive-delta">+0.1</td>
-            <td class="positive-delta">+2.6</td>
-            <td class="positive-delta">+0.5</td>
-            <td class="positive-delta">+2.2</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 class="title is-4" style="margin-top: 3rem;">Out-of-Domain Tasks</h3>
-    <p class="subtitle is-6">Qwen2.5-1.5B-Instruct</p>
-    
-    <div style="overflow-x: auto;">
-      <table class="results-table">
-        <thead>
-          <tr>
-            <th>Method</th>
-            <th>GSM-8K</th>
-            <th>MATH</th>
-            <th>DivLogicEval</th>
-            <th>SocialIQA</th>
-            <th>CodeMMLU</th>
-            <th>JAMA</th>
-            <th>Avg</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Union Train LoRA</td>
-            <td>34.2</td>
-            <td>32.2</td>
-            <td>24.1</td>
-            <td>51.4</td>
-            <td>34.7</td>
-            <td>34.7</td>
-            <td>36.1</td>
-          </tr>
-          <tr>
-            <td>ABMLL</td>
-            <td>28.7</td>
-            <td>15.9</td>
-            <td>26.9</td>
-            <td>66.3</td>
-            <td>39.6</td>
-            <td>28.5</td>
-            <td>34.3</td>
-          </tr>
-          <tr>
-            <td>MAML-en-LLM</td>
-            <td>35.6</td>
-            <td>43.5</td>
-            <td>31.2</td>
-            <td>68.7</td>
-            <td>42.3</td>
-            <td>32.5</td>
-            <td>42.3</td>
-          </tr>
-          <tr class="highlight-row">
-            <td><strong>DeGAML-LLM (Ours)</strong></td>
-            <td><strong>51.4</strong></td>
-            <td><strong>46.9</strong></td>
-            <td><strong>31.4</strong></td>
-            <td><strong>69.5</strong></td>
-            <td><strong>44.6</strong></td>
-            <td><strong>41.5</strong></td>
-            <td><strong>47.5</strong></td>
-          </tr>
-          <tr>
-            <td>Δ (vs MAML-en-LLM)</td>
-            <td class="positive-delta">+15.8</td>
-            <td class="positive-delta">+3.4</td>
-            <td class="positive-delta">+0.2</td>
-            <td class="positive-delta">+0.8</td>
-            <td class="positive-delta">+2.3</td>
-            <td class="positive-delta">+9.0</td>
-            <td class="positive-delta">+5.3</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="notification is-info is-light" style="margin-top: 2rem;">
-      <p><strong>Note:</strong> Results shown are with Qwen2.5-1.5B-Instruct. DeGAML-LLM shows particularly strong improvements on out-of-domain tasks, with +15.8 points on GSM-8K and +9.0 points on JAMA medical QA, demonstrating robust generalization.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Ablation Study -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Ablation Study</h2>
-    <p class="has-text-centered" style="margin-bottom: 2rem;">
-      Impact of generalization and adaptation stages. <strong>Base Model</strong> denotes the frozen pretrained LLM without any LoRA adapters. 
-      <strong>Generalization</strong> evaluates performance using generated LoRA parameters without task-specific refinement.
-      <strong>Adaptation</strong> applies RL-based refinement to the generated parameters.
-    </p>
-    
-    <div style="overflow-x: auto;">
-      <table class="results-table">
-        <thead>
-          <tr>
-            <th>Stage</th>
-            <th>ARC-c</th>
-            <th>ARC-e</th>
-            <th>HellaSwag</th>
-            <th>BoolQ</th>
-            <th>PIQA</th>
-            <th>WinoGrande</th>
-            <th>Avg</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Base Model</td>
-            <td>71.5</td>
-            <td>83.0</td>
-            <td>50.9</td>
-            <td>56.3</td>
-            <td>45.8</td>
-            <td>50.6</td>
-            <td>59.6</td>
-          </tr>
-          <tr>
-            <td>+ Generalization</td>
-            <td>73.0 <span class="positive-delta">(+2.1%)</span></td>
-            <td>83.7 <span class="positive-delta">(+0.8%)</span></td>
-            <td>56.2 <span class="positive-delta">(+10.4%)</span></td>
-            <td>55.2 <span class="negative-delta">(-2.0%)</span></td>
-            <td>56.4 <span class="positive-delta">(+23.1%)</span></td>
-            <td>50.2 <span class="negative-delta">(-0.8%)</span></td>
-            <td>62.5 <span class="positive-delta">(+4.9%)</span></td>
-          </tr>
-          <tr class="highlight-row">
-            <td><strong>+ Adaptation</strong></td>
-            <td>73.7 <span class="positive-delta">(+1.0%)</span></td>
-            <td>88.4 <span class="positive-delta">(+5.6%)</span></td>
-            <td>57.2 <span class="positive-delta">(+1.8%)</span></td>
-            <td>58.8 <span class="positive-delta">(+6.5%)</span></td>
-            <td>70.7 <span class="positive-delta">(+25.4%)</span></td>
-            <td>57.3 <span class="positive-delta">(+14.1%)</span></td>
-            <td>67.7 <span class="positive-delta">(+8.3%)</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <div class="bibtex-header">
-      <h2 class="title">BibTeX</h2>
-      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-        <i class="fas fa-copy"></i>
-        <span class="copy-text">Copy</span>
-      </button>
-    </div>
-    <pre id="bibtex-code"><code>@article{vetcha2025degaml,
+        <pre id="bibtex-code"><code>@article{vetcha2025degaml,
   title={Decoupling Generalization and Adaptation in Meta-Learning for Large Language Models},
   author={Vetcha, Nitin and Xu, Binqian and Liu, Dianbo},
   journal={arXiv preprint},
   year={2025},
   url={https://github.com/nitinvetcha/DeGAML-LLM}
 }</code></pre>
-  </div>
-</section>
-<!--End BibTex citation -->
+      </div>
+    </section>
+    <!--End BibTex citation -->
 
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
 
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-  </body>
-  </html>
+</body>
+
+</html>
