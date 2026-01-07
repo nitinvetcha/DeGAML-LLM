@@ -183,7 +183,7 @@ DeGAML-LLM/
 │   │   ├── test_time_scaling.py   # TTS ensembling
 │   │   ├── lora_mixing.py         # LoRA subspace mixing
 │   │   └── latent_space.py        # SLOT vectors
-│   ├── generator/                 # Parameter generator (from DnD)
+│   ├── generator/                 # Parameter generator architecture
 │   │   ├── dataset/              # Dataset handling
 │   │   ├── model/                # Generator model
 │   │   ├── module/               # Hyperconvolution modules
@@ -220,11 +220,13 @@ python -m degaml.ablation.ablation_runner \
 
 ### Training the Parameter Generator
 
-See [Drag-and-Drop-LLMs](https://github.com/hiyouga/Drag-and-Drop-LLMs) for generator training instructions. Key steps:
+The parameter generator uses a hyperconvolutional decoder architecture that is self-contained in this repository. Key steps:
 
 1. Collect LoRA checkpoints across meta-training tasks
 2. Calculate importance scores for parameter tokenization
 3. Train hyperconvolutional decoder via MSE loss
+
+Training scripts and detailed instructions will be provided in future releases. Pre-trained checkpoints are available in [CHECKPOINTS.md](docs/CHECKPOINTS.md).
 
 ### Training the RL Policy
 

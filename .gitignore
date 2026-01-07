@@ -48,6 +48,8 @@ env/
 
 # Data directories
 data/
+!data/README.md
+!data/download_datasets.py
 datasets/
 *.jsonl
 *.csv

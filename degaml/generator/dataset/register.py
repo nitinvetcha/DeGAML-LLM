@@ -5,7 +5,7 @@ from collections import OrderedDict
 import torch
 from torch import Tensor
 
-from workspace.dnd.tools import load_safetensors, save_safetensors
+from degaml.generator.tools import load_safetensors, save_safetensors
 
 from .dataset import CheckpointDataset_PaddedToSame, DataLoadingError
 

@@ -124,7 +124,7 @@ checkpoints/
 
 ### Parameter Generator
 
-See [Drag-and-Drop-LLMs documentation](https://github.com/hiyouga/Drag-and-Drop-LLMs) for generator training.
+The parameter generator is trained on collected LoRA checkpoint trajectories using the hyperconvolutional decoder architecture included in this repository.
 
 Key steps:
 1. Collect LoRA checkpoints across tasks
@@ -132,8 +132,9 @@ Key steps:
 3. Train hyperconvolutional decoder
 
 ```bash
-# Example training command (requires DnD setup)
-python workspace/main/generate/qwen0.5lora_generation_common_sense_reasoning.py
+# Example training command (self-contained in this repository)
+# Training scripts will be added in future releases
+# For now, pre-trained checkpoints are provided above
 ```
 
 ### Policy Adapter

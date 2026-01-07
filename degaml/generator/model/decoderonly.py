@@ -4,7 +4,7 @@ import torch
 from torch import Tensor, nn
 from torch.nn import functional as F
 
-from workspace.dnd.module.hyperconv import HyperConvDecoder
+from degaml.generator.module.hyperconv import HyperConvDecoder
 
 from .interface import ModelInterface
 

@@ -7,8 +7,8 @@ import torch
 from torch import Tensor
 from torch.utils.data import Dataset
 
-from workspace.dnd.tokenizer import TokenizerInterface
-from workspace.dnd.tools import load_safetensors
+from degaml.generator.tokenizer import TokenizerInterface
+from degaml.generator.tools import load_safetensors
 
 
 class DataLoadingError(Exception):
