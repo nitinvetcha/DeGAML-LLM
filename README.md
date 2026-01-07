@@ -18,8 +18,6 @@
 - [📚 Repository Structure](#repository-structure)
 - [🔧 Advanced Usage](#advanced-usage)
 - [📖 Documentation](#documentation)
-- [🎯 Citation](#citation)
-- [🙏 Acknowledgments](#acknowledgments)
 - [📄 License](#license)
 - [🤝 Contributing](#contributing)
 - [📧 Contact](#contact)
