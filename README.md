@@ -134,8 +134,6 @@ python -m degaml.adaptation.test_time_training \
     --batch_size 4
 ```
 
-For complete pipeline examples, see [docs/USAGE.md](docs/USAGE.md).
-
 ---
 
 ## 📊 Experimental Results
