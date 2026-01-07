@@ -5,7 +5,6 @@ from torch import Tensor, nn
 from torch.nn import functional as F
 
 from degaml.generator.module.hyperconv import HyperConvDecoder
-
 from .interface import ModelInterface
 
 BERT_MAX_L = 512
