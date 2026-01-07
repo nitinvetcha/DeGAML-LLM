@@ -4,11 +4,8 @@
 
 ![DeGAML-LLM Architecture](assets/DeGAML-LLM-comparison-LLM.png)
 
-**[Paper]** | **[Citation](#citation)** | **[Documentation](docs/)** | **[Checkpoints](docs/CHECKPOINTS.md)**
-
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
-[![Paper](https://img.shields.io/badge/paper-spotlight-red.svg)]()
 
 </div>
 
