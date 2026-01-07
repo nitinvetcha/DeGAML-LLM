@@ -1,0 +1,51 @@
+# DeGAML-LLM: Decoupled Generalization and Adaptation Meta-Learning for LLMs
+# Python version: 3.12+
+
+# Core dependencies
+python>=3.12
+
+# Deep Learning frameworks
+torch>=2.0.0
+transformers==4.49.0
+accelerate==1.2.1
+bitsandbytes
+safetensors
+
+# Numerical computing
+numpy<2.0.0
+einops
+
+# Data processing
+ijson
+lxml
+
+# Computer vision (for parameter tokenization)
+timm
+
+# Machine Learning utilities
+wandb  # For logging
+huggingface_hub
+
+# vLLM for efficient inference
+vllm
+
+# LLaMA-Factory for training and inference infrastructure
+llamafactory[torch,metrics] @ git+https://github.com/hiyouga/LLaMA-Factory.git@v0.9.2
+
+# PEFT for parameter-efficient fine-tuning
+peft
+
+# Configuration and utilities
+fire  # CLI interface
+invoke  # Task automation
+pyyaml  # Configuration files
+tqdm  # Progress bars
+
+# Development dependencies (optional)
+# black  # Code formatting
+# isort  # Import sorting
+# pytest  # Testing
+# mypy  # Type checking
+
+# Note: Some dependencies like av<15.0.0 may be needed depending on your setup
+av<15.0.0

@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model checkpoints and weights
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.weights
+
+# Data directories
+data/
+datasets/
+*.jsonl
+*.csv
+
+# Output directories
+outputs/
+results/
+logs/
+checkpoints/
+generated/
+test_ckpts/
+slot_vectors/
+wandb/
+
+# Temporary files
+*.log
+*.tmp
+.cache/
+tmp/
+
+# Config overrides (keep templates)
+*_local.yaml
+*_override.yaml
