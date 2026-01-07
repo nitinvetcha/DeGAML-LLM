@@ -2,7 +2,7 @@
 DeGAML-LLM: Decoupled Generalization and Adaptation Meta-Learning for Large Language Models
 
 This package implements DeGAML-LLM, a novel meta-learning framework that separates
-generalization (parameter generation) from adaptation (task-specific refinement) for LLMs.
+generalization from adaptation in meta-learning for LLMs.
 
 Main components:
 - core: Main pipeline orchestration, hypothesis generation, baseline evaluation
