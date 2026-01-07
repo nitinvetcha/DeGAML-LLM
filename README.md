@@ -149,22 +149,24 @@ For complete pipeline examples, see [docs/USAGE.md](docs/USAGE.md).
 
 ### In-Domain Tasks (Common-Sense Reasoning)
 
-| Method | ARC-c | HellaSwag | BoolQ | PIQA | WinoGrande | Avg |
-|--------|-------|-----------|-------|------|------------|-----|
-| Multi-Task Baseline | 45.2 | 52.1 | 67.3 | 72.4 | 58.9 | 59.2 |
-| MAML-en-LLM | 47.8 | 54.6 | 69.1 | 73.8 | 60.2 | 61.1 |
-| ABMLL | 48.3 | 55.2 | 70.4 | 74.1 | 61.3 | 61.9 |
-| **DeGAML-LLM** | **51.7** | **58.4** | **73.2** | **76.9** | **64.1** | **64.9** |
+| Method | ARC-c | ARC-e | HellaSwag | BoolQ | PIQA | WinoGrande | Avg |
+|--------|-------|-------|-----------|-------|------|------------|-----|
+| No Meta-Train LoRA | 74.5 | 84.4 | 55.8 | 55.6 | 65.6 | 48.2 | 64.0 |
+| Union Train LoRA | 63.2 | 73.9 | 48.9 | 55.1 | 47.8 | 61.3 | 58.3 |
+| ABMLL | 69.9 | 83.2 | 51.1 | 63.2 | 54.3 | 52.9 | 62.4 |
+| MAML-en-LLM | 66.0 | 84.3 | 59.3 | 58.7 | 68.1 | 56.8 | 65.5 |
+| **DeGAML-LLM** | **73.7** | **88.4** | **57.2** | **58.8** | **70.7** | **57.3** | **67.7** |
 
 ### Out-of-Domain Tasks
 
-| Method | GSM-8K | MATH | LogiQA | SocialIQA | MedQA | HumanEval |
-|--------|--------|------|--------|-----------|-------|-----------|
-| Multi-Task | 32.1 | 18.4 | 28.7 | 42.3 | 35.6 | 24.8 |
-| MAML-en-LLM | 34.5 | 20.1 | 30.2 | 44.1 | 37.2 | 26.3 |
-| **DeGAML-LLM** | **38.9** | **23.7** | **33.8** | **47.6** | **41.4** | **29.1** |
+| Method | GSM-8K | MATH | DivLogicEval | SocialIQA | CodeMMLU | JAMA | Avg |
+|--------|--------|------|--------------|-----------|----------|------|-----|
+| Union Train LoRA | 34.2 | 32.2 | 24.1 | 51.4 | 34.7 | 34.7 | 36.1 |
+| ABMLL | 28.7 | 15.9 | 26.9 | 66.3 | 39.6 | 28.5 | 34.3 |
+| MAML-en-LLM | 35.6 | 43.5 | 31.2 | 68.7 | 42.3 | 32.5 | 42.3 |
+| **DeGAML-LLM** | **51.4** | **46.9** | **31.4** | **69.5** | **44.6** | **41.5** | **47.5** |
 
-> **Note**: Results with Qwen2.5-0.5B-Instruct. See paper for complete results across model scales.
+> **Note**: Results with Qwen2.5-1.5B-Instruct. See paper for complete results across model scales.
 
 ---
 
