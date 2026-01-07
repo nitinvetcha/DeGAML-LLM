@@ -41,17 +41,13 @@ DeGAML-LLM consists of two key components trained sequentially:
 
 ![Architecture Diagram](assets/DeGAML-LLM-LLM.png)
 
-### 1. Generalization Module (Parameter Generator)
+### 1. Generalization Module 
 
 - **Input**: Task prompts (unlabeled examples from test set)
 - **Output**: Distribution over LoRA adapter parameters
-- **Architecture**: 
-  - Sentence-BERT encoder (all-MiniLM-L6-v2) for task embedding
-  - Hyperconvolutional decoder for parameter generation
-  - Parameter tokenization with 2D positional embeddings
 - **Training**: Offline via MSE loss on collected LoRA checkpoints (no adaptation)
 
-### 2. Adaptation Module (RL Policy)
+### 2. Adaptation Module 
 
 - **Input**: Generated adapter parameters + validation performance
 - **Output**: Adaptation strategy selection and refinement
