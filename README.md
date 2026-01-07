@@ -241,30 +241,6 @@ python -m degaml.policy.train_policy \
 
 ---
 
-## 🎯 Citation
-
-If you use DeGAML-LLM in your research, please cite our paper:
-
-```bibtex
-@inproceedings{degaml-llm2025,
-  title={Decoupled Generalization and Adaptation Meta-Learning for Large Language Models},
-  author={[Authors]},
-  booktitle={[Conference]},
-  year={2025}
-}
-```
-
----
-
-## 🙏 Acknowledgments
-
-- **Drag-and-Drop-LLMs** for the parameter generator architecture baseline
-- **LLaMA-Factory** for training and inference infrastructure
-- **vLLM** for efficient LLM inference
-- **Sentence-Transformers** for text embedding models
-
----
-
 ## 📄 License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
@@ -277,7 +253,7 @@ We welcome contributions! Please see our contributing guidelines for more inform
 
 ## 📧 Contact
 
-For questions and feedback, please open an issue or contact [contact email].
+For questions and feedback, please open an issue or contact nitinvetcha@gmail.com
 
 ---
 
