@@ -15,7 +15,7 @@
 
 ### Key Innovation
 
-Traditional meta-learning for LLMs conflates two distinct objectives:
+Traditional meta-learning for LLMs couples two distinct objectives:
 1. **Generalization**: Learning task-agnostic representations across task distributions
 2. **Adaptation**: Enabling rapid task-specific refinement
 
