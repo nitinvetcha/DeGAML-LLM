@@ -7,6 +7,7 @@
 <a href='https://nitinvetcha.github.io/DeGAML-LLM/' style="text-decoration: none;"><img src='https://img.shields.io/badge/DeGAML-LLM-Projectpage-orange?style=flat&logo=googlehome&logoColor=%23FFFFFF'></a>
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://nitinvetcha.github.io/DeGAML-LLM/)
 
 </div>
 
@@ -250,6 +251,7 @@ python -m degaml.policy.train_policy \
 
 ## 📖 Documentation
 
+- **[Project Page](https://nitinvetcha.github.io/DeGAML-LLM/)**: Interactive website with full results and visualizations
 - **[Installation Guide](docs/INSTALLATION.md)**: Detailed installation and setup instructions
 - **[Usage Guide](docs/USAGE.md)**: Complete usage examples and tutorials
 - **[Architecture](docs/ARCHITECTURE.md)**: In-depth architecture explanation
