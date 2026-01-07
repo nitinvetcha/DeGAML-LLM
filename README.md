@@ -11,16 +11,16 @@
 
 ## 📑 Contents
 
-- [📋 Overview](#overview)
-- [🏗️ Architecture](#architecture)
-- [🚀 Quick Start](#quick-start)
-- [📊 Experimental Results](#experimental-results)
-- [📚 Repository Structure](#repository-structure)
-- [🔧 Advanced Usage](#advanced-usage)
-- [📖 Documentation](#documentation)
-- [📄 License](#license)
-- [🤝 Contributing](#contributing)
-- [📧 Contact](#contact)
+- 📋 [Overview](#overview)
+- 🏗️ [Architecture](#architecture)
+- 🚀 [Quick Start](#quick-start)
+- 📊 [Experimental Results](#experimental-results)
+- 📚 [Repository Structure](#repository-structure)
+- 🔧 [Advanced Usage](#advanced-usage)
+- 📖 [Documentation](#documentation)
+- 📄 [License](#license)
+- 🤝 [Contributing](#contributing)
+- 📧 [Contact](#contact)
 
 ---
 
