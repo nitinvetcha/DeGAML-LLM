@@ -9,7 +9,7 @@
 
 </div>
 
-## � Contents
+## 📑 Contents
 
 - [📋 Overview](#overview)
 - [🏗️ Architecture](#architecture)
@@ -26,7 +26,7 @@
 
 ---
 
-## �📋 Overview
+## 📋 Overview
 
 **DeGAML-LLM** introduces a novel meta-learning framework that explicitly decouples generalization and adaptation for large language models, addressing fundamental limitations in existing approaches like MAML-en-LLM and ABMLL.
 
