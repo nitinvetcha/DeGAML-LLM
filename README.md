@@ -220,7 +220,7 @@ Isolate contributions of individual adaptation families:
 ```bash
 python -m degaml.ablation.ablation_runner \
     --eval_dataset ARC-c \
-    --test_dataset MATH-MC \
+    --test_dataset ARC-c \
     --family TTT \
     --num_samples 25 \
     --iterations 1
