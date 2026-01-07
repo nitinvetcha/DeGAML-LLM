@@ -8,7 +8,7 @@ This document provides information about downloading and using pre-trained check
 
 ## Available Checkpoints
 
-### Parameter Generator (Generalization Module)
+### Generalization Module
 
 The parameter generator is trained offline on collected LoRA checkpoint trajectories.
 
@@ -23,7 +23,7 @@ The parameter generator is trained offline on collected LoRA checkpoint trajecto
 - Common-sense: ARC-c, HellaSwag, BoolQ, PIQA, WinoGrande
 - Multi-domain: + GSM-8K, MATH, LogiQA, SocialIQA, MedQA, HumanEval, CodeMMLU
 
-### Policy Adapter (Adaptation Module)
+### Adaptation Module
 
 The RL policy is trained online with the generator frozen.
 
