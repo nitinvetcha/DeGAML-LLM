@@ -304,13 +304,4 @@ degaml/
 
 ---
 
-## References
-
-- **Parameter Generator**: Based on [Drag-and-Drop-LLMs](https://github.com/hiyouga/Drag-and-Drop-LLMs)
-- **SLOT**: [Sample-specific Language Model Optimization at Test-time]()
-- **ReST^EM**: [Reinforcement Learning with Self-Training via Expectation-Maximization]()
-- **LoRA**: [Low-Rank Adaptation of Large Language Models]()
-
----
-
 For implementation details, see the source code and inline documentation.
