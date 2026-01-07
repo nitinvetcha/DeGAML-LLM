@@ -165,33 +165,33 @@ python -m degaml.adaptation.test_time_training \
 
 ```
 DeGAML-LLM/
-├── degaml/                        # Main package
-│   ├── core/                      # Core pipeline modules
-│   │   ├── baseline.py            # Baseline adapter generation
-│   │   ├── hypothesis_generation.py  # RL-based hypothesis generation
-│   │   ├── accuracy.py            # Accuracy calculation
+├── degaml/                        
+│   ├── core/                      
+│   │   ├── baseline.py            
+│   │   ├── hypothesis_generation.py  
+│   │   ├── accuracy.py            
 │   │   └── mega.py                # Pipeline orchestrator
-│   ├── adaptation/                # Adaptation family modules
-│   │   ├── test_time_training.py  # TTT implementation
-│   │   ├── test_time_scaling.py   # TTS ensembling
-│   │   ├── lora_mixing.py         # LoRA subspace mixing
-│   │   └── latent_space.py        # SLOT vectors
-│   ├── generator/                 # Parameter generator architecture
-│   │   ├── dataset/              # Dataset handling
-│   │   ├── model/                # Generator model
-│   │   ├── module/               # Hyperconvolution modules
-│   │   ├── tokenizer/            # Parameter tokenization
-│   │   └── tools/                # Utilities
-│   ├── policy/                    # RL policy training
-│   ├── utils/                     # Shared utilities
-│   │   ├── paths.py              # Path configuration
-│   │   └── config.py             # Config management
-│   └── ablation/                  # Ablation study scripts
-├── configs/                       # Configuration files
-├── docs/                          # Documentation
-├── scripts/                       # Training/inference scripts
-├── assets/                        # Paper figures
-└── requirements.txt               # Dependencies
+│   ├── adaptation/                
+│   │   ├── test_time_training.py  
+│   │   ├── test_time_scaling.py   
+│   │   ├── lora_mixing.py         
+│   │   └── latent_space.py        
+│   ├── generator/                 
+│   │   ├── dataset/              
+│   │   ├── model/                
+│   │   ├── module/               
+│   │   ├── tokenizer/            
+│   │   └── tools/                
+│   ├── policy/                    
+│   ├── utils/                     
+│   │   ├── paths.py              
+│   │   └── config.py            
+│   └── ablation/                  
+├── configs/                       
+├── docs/                          
+├── scripts/                       
+├── assets/                        
+└── requirements.txt               
 ```
 
 ---
