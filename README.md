@@ -4,9 +4,11 @@
 
 ![DeGAML-LLM Architecture](assets/DeGAML-LLM-comparison-LLM.png)
 
-[![DeGAML-LLM Projectpage](https://img.shields.io/badge/Project-Page-green.svg)](https://nitinvetcha.github.io/DeGAML-LLM/)
+<a href='https://nitinvetcha.github.io/DeGAML-LLM/' style="text-decoration: none;"><img src='https://img.shields.io/badge/DeGAML-LLM-Projectpage-orange?style=flat&logo=googlehome&logoColor=%23FFFFFF'></a>
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://nitinvetcha.github.io/DeGAML-LLM/)
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Checkpoints-yellow)](https://huggingface.co/Nitin2004/DeGAML-LLM-checkpoints)
 
 </div>
 
@@ -235,7 +237,19 @@ The parameter generator uses a hyperconvolutional decoder architecture that is s
 2. Calculate importance scores for parameter tokenization
 3. Train hyperconvolutional decoder via MSE loss
 
-Training scripts and detailed instructions will be provided in future releases. Pre-trained checkpoints are available in [CHECKPOINTS.md](docs/CHECKPOINTS.md).
+Training scripts and detailed instructions will be provided in future releases. 
+
+**Pre-trained LoRA checkpoints** are available on HuggingFace: [Nitin2004/DeGAML-LLM-checkpoints](https://huggingface.co/Nitin2004/DeGAML-LLM-checkpoints)
+
+Download checkpoints using:
+```python
+from huggingface_hub import hf_hub_download
+
+checkpoint = hf_hub_download(
+    repo_id="Nitin2004/DeGAML-LLM-checkpoints",
+    filename="qwen0.5lora__ARC-c.pth"
+)
+```
 
 ### Training the RL Policy
 
@@ -251,10 +265,10 @@ python -m degaml.policy.train_policy \
 ## 📖 Documentation
 
 - **[Project Page](https://nitinvetcha.github.io/DeGAML-LLM/)**: Interactive website with full results and visualizations
+- **[HuggingFace Checkpoints](https://huggingface.co/Nitin2004/DeGAML-LLM-checkpoints)**: Pre-trained LoRA adapter checkpoints
 - **[Installation Guide](docs/INSTALLATION.md)**: Detailed installation and setup instructions
 - **[Usage Guide](docs/USAGE.md)**: Complete usage examples and tutorials
 - **[Architecture](docs/ARCHITECTURE.md)**: In-depth architecture explanation
-- **[Checkpoints](docs/CHECKPOINTS.md)**: Pre-trained model downloads
 
 ---
 
