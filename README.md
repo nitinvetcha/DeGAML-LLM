@@ -4,10 +4,9 @@
 
 ![DeGAML-LLM Architecture](assets/DeGAML-LLM-comparison-LLM.png)
 
-<a href='https://nitinvetcha.github.io/DeGAML-LLM/' style="text-decoration: none;"><img src='https://img.shields.io/badge/DeGAML-LLM-Projectpage-orange?style=flat&logo=googlehome&logoColor=%23FFFFFF'></a>
+[![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://nitinvetcha.github.io/DeGAML-LLM/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
-[![Project Page](https://img.shields.io/badge/Project-Page-green.svg)](https://nitinvetcha.github.io/DeGAML-LLM/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Checkpoints-yellow)](https://huggingface.co/Nitin2004/DeGAML-LLM-checkpoints)
 
 </div>
