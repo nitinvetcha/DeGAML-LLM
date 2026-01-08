@@ -264,7 +264,7 @@ python -m degaml.policy.train_policy \
 ## 📖 Documentation
 
 - **[Project Page](https://nitinvetcha.github.io/DeGAML-LLM/)**: Interactive website with full results and visualizations
-- **[HuggingFace Checkpoints](https://huggingface.co/Nitin2004/DeGAML-LLM-checkpoints)**: Pre-trained LoRA adapter checkpoints
+- **[HuggingFace Checkpoints](https://huggingface.co/Nitin2004/DeGAML-LLM-checkpoints)**: Pre-trained generalizaton module's checkpoints
 - **[Installation Guide](docs/INSTALLATION.md)**: Detailed installation and setup instructions
 - **[Usage Guide](docs/USAGE.md)**: Complete usage examples and tutorials
 - **[Architecture](docs/ARCHITECTURE.md)**: In-depth architecture explanation
