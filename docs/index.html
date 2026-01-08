@@ -295,6 +295,18 @@
                     </a>
                   </span>
 
+                  <!-- HuggingFace Checkpoints -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/Nitin2004/DeGAML-LLM-checkpoints" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                      style="background: linear-gradient(135deg, #FFD21E 0%, #FF6B35 100%); border: none;">
+                      <span class="icon">
+                        <i class="fas fa-download"></i>
+                      </span>
+                      <span>🤗 Checkpoints</span>
+                    </a>
+                  </span>
+
                   <!-- Paper PDF (placeholder for now) -->
                   <span class="link-block">
                     <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark"
@@ -423,7 +435,7 @@
             <div class="method-card">
               <div class="method-icon">🔮</div>
               <h4 class="title is-5">Generalization Module</h4>
-              <p>Generates LoRA adapter parameters from task prompts using a generalization model trained
+              <p>Learns to generate LoRA adapter parameters from task prompts using a hyperconvolutional decoder trained
                 on checkpoint trajectories. Captures cross-task structural knowledge without encoding any specific
                 adaptation trajectory.</p>
             </div>
